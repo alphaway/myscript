@@ -24,7 +24,6 @@ do
 			new_suffix=$OPTARG 
 			let opt_cnt++ ;;
 		\?)
-			echo $Usage
 			exit 1;;
 	esac
 done
@@ -36,4 +35,6 @@ then
 		`mv $file $new_file_name`
 		echo "rename $file ---> $new_file_name"
 	done
+else
+	echo $Usage
 fi
