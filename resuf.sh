@@ -6,7 +6,7 @@
 #参数3 ：-n new_suffix  需要改成何种后缀名，如果需要将a.jpg 改名成a.png, 那么参数是 -n png
 #注意： 该脚本具有递归性质
 
-Usage="Usage [-d direction] [-o old_suffix] [-n new_suffix]"
+Usage="Usage resuf.sh [-d direction] [-o old_suffix] [-n new_suffix]"
 opt_cnt=0
 direction=""
 old_suffix=""
@@ -24,7 +24,7 @@ do
 			new_suffix=$OPTARG 
 			let opt_cnt++ ;;
 		\?)
-			echo "Usage [-d direction] [-o old_suffix] [-n new_suffix] "
+			echo $Usage
 			exit 1;;
 	esac
 done
